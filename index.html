@@ -8,146 +8,165 @@
         <link rel = "stylesheet" href = "style/style.css" />
     </head>
     <body>
-        <!--Profile class include profile-left, profile-mid and profile-right-->
-        <section class = "profile">
-            <div class = "profileLeft">
-                <img src = "images/pain.png" alt = "Ben's profile picture" >
-            </div>
-            <div class = "profileLeft">
-                <p>
-                    <h2>Ben Nguyen</h2> <br> <br>
-                    <em>"What role am I"</em>
-                </p>
-            </div>
-            <!--Use nav class instead of div class-->
-            <div class = "profileRight">
-                <!--GitHub-->
-                <div class = "socialMediaBox">
-                    <a href = "https://github.com/BenNguyen0204" target = "_blank" rel = "noopener noreferrer">
-                        <img class = "hideBackground" src = "images/gitHubLogo.png" alt = "gitHubLogo">
-                    </a>
+        <div class= "pageContainer brownBorder">
+            <!--Profile class include profile-left, profile-mid and profile-right-->
+            <section class = "profile brownBorder wheatBgColor">
+                <div class = "profileLeft">
+                    <img src = "images/pain.png" alt = "Ben's profile picture" >
+                </div>
+                <div class = "profileLeft">
+                    <p>
+                        <h2>Ben Nguyen</h2> <br> <br>
+                        <em>"What role am I"</em>
+                    </p>
+                </div>
+                <!--Use nav class instead of div class-->
+                <div class = "profileRight">
+                    <!--GitHub-->
+                    <div class = "socialMediaBox brownBorder">
+                        <a href = "https://github.com/BenNguyen0204" target = "_blank" rel = "noopener noreferrer">
+                            <img class = "hideBackground" src = "images/gitHubLogo.png" alt = "gitHubLogo">
+                        </a>
+                    </div>
+                    
+                    <!--LinkedIn-->
+                    <div class = "socialMediaBox brownBorder">
+                        <a href = "https://www.linkedin.com/in/bennguyen0204/" target = "_blank" rel = "noopener noreferrer">
+                            <img class = "hideBackground" src = "images/linkedInLogo.png" alt = "linkedin">
+                        </a>
+                    </div>
+                    <!--Email-->
+                    <div class = "socialMediaBox brownBorder">
+                        <a href = "#contactID">
+                            <img class = "hideBackground" src = "images/email.png" alt = "ScrollToContact">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <br>
+
+            <h2>Hi, I'm Ben</h2>
+            <p>
+                I am a third-year Software Systems student at SFU.
+                Right now, I'm learning front-end web development and trying to level up my skills.
+            </p>
+            <p>
+                Here are some of the things I work with:
+                <ul>
+                    <li>Programming languages: C++, Java</li>
+                    <li>Web & Backend Frameworks: Spring Boot </li>
+                    <li>Web Technologies: HTML, CSS </li>
+                </ul>
+            </p>
+            <br>
+
+            <!--Work experiences-->
+            <h1 class = "brownBorder brownBgColor">Work Experiences</h1>
+            <section class = "workExperiences">
+                <div class = "brownBorder wheatBgColor">
+                    <h2>Part Time Barista</h2>
+                    <p>
+                        @ GongCha Renfrew <br>
+                        <em>Work date: Jul 2024 - Present</em>
+                    <ul>
+                        <li>Answered customer questions and managed transactions.</li>
+                        <li>Collaborated with team members to provide efficient service under pressure during rush hours.</li>
+                        <li>Performed opening and closing duties, kept workspaces clean and organized, and restocked supplies during slower periods.</li>
+                    </ul>
+                </div>
+            </section>
+            <br>
+
+            <br>
+            <!--Personal Projects-->
+            <h1 class = "brownBorder brownBgColor">My Personal Projects</h1>
+            <section class = "personalProjects ">
+                <div class = "projects  brownBorder wheatBgColor">
+                    <h2>Project 1</h2>
+                    <p>
+                        <em>Repository link: </em> <br>
+                        <em>Description: </em> <br>
+                        <em>Stack used: </em>
+                    </p>
+                </div>
+                <div class = "projects  brownBorder wheatBgColor">
+                    <h2>Project 2</h2>
+                    <p>
+                        <em>Repository link: </em> <br>
+                        <em>Description: </em> <br>
+                        <em>Stack used: </em>
+                    </p>
+                </div>
+
+                
+                <div class = "projects  brownBorder wheatBgColor">
+                    <h2>Project 1</h2>
+                    <p>
+                        <em>Repository link: </em> <br>
+                        <em>Description: </em> <br>
+                        <em>Stack used: </em>
+                    </p>
                 </div>
                 
-                <!--LinkedIn-->
-                <div class = "socialMediaBox">
-                    <a href = "https://www.linkedin.com/in/bennguyen0204/" target = "_blank" rel = "noopener noreferrer">
-                        <img class = "hideBackground" src = "images/linkedInLogo.png" alt = "linkedin">
-                    </a>
-                </div>
-                <!--Email-->
-                <div class = "socialMediaBox">
-                    <a href = "#contact">
-                        <img class = "hideBackground" src = "images/email.png" alt = "ScrollToContact">
-                    </a>
-                </div>
-            </div>
-        </section>
-        <br>
-        <h2>Hi, I'm Ben</h2>
-        <p>
-            I am a third-year Software Systems student at SFU.
-            Right now, I'm learning front-end web development and trying to level up my skills.
-        </p>
-        <p>
-            Here are some of the things I work with:
-            <ul>
-                <li>Programming languages: C++, Java</li>
-                <li>Web & Backend Frameworks: Spring Boot </li>
-                <li>Web Technologies: HTML, CSS </li>
-            </ul>
-        </p>
-        <br>
-        <!--Work experiences-->
-        <h1>Work Experiences</h1>
-        <section class = "workExperiences">
-            <div class = "work">
-                <h2>Part Time Barista</h2>
-                <p>
-                    Part time barista at GongCha Renfrew <br>
-                    Work date: Jul 2024 - Present <br> <br>
-                    <em>Job descriptions:</em>
-                </p>
-                <ul>
-                    <li>Answered customer questions and managed transactions.</li>
-                    <li>Collaborated with team members to provide efficient service under pressure during rush hours.</li>
-                    <li>Performed opening and closing duties, kept workspaces clean and organized, and restocked supplies during slower periods.</li>
-                </ul>
-            </div>
-        </section>
-        <br>
-        <!--Personal Projects-->
-        <h1>My Personal Projects</h1>
-        <section class = "personalProjects">
-            <div class = "projects">
-                <h2>Project 1</h2>
-                <p>
-                    <em>Repository link: </em> <br>
-                    <em>Description: </em> <br>
-                    <em>Stack used: </em>
-                </p>
-            </div>
-            <div class = "projects">
-                <h2>Project 2</h2>
-                <p>
-                    <em>Repository link: </em> <br>
-                    <em>Description: </em> <br>
-                    <em>Stack used: </em>
-                </p>
-            </div>
 
+                <div class = "projects brownBorder wheatBgColor">
+                    <h2>Project 2</h2>
+                    <p>
+                        <em>Repository link: </em> <br>
+                        <em>Description: </em> <br>
+                        <em>Stack used: </em>
+                    </p>
+                </div>
+
+            </section>
+
+            <br>
+            <br>
+
+            <!--Contact section-->
+            <h1 class = "brownBorder brownBgColor">Contact Me</h1>
+            <section class = "contact" id = "contactID">
+                <div class = "contactSection">
+                    <form action = "mailto:bennnguyen.04@gmail.com" method = "post">
+                        <label class = "labelForUserInput">Your Name</label>
+                        <input class = "input brownBorder wheatBgColor" placeholder = "What should I call you?"> <br>
+                        
+                        <label class = "labelForUserInput">Your email</label>
+                        <input class = "input brownBorder wheatBgColor" placeholder = "Where can I reach you?"> <br>
+                        
+                        <label class = "labelForUserInput">Your message</label>
+                        <textarea class = "message brownBorder wheatBgColor" placeholder = "Leave a comment"></textarea> <br><br>
+                        
+                        <button class = "brownBorder brownBgColor" type = "submit" value = "Send">Send</button>
+                    </form>
+                </div>
+            </section>
             
-            <div class = "projects">
-                <h2>Project 1</h2>
-                <p>
-                    <em>Repository link: </em> <br>
-                    <em>Description: </em> <br>
-                    <em>Stack used: </em>
-                </p>
-            </div>
-            
+            <br>
+            <br>
+            <hr>
 
-            <div class = "projects">
-                <h2>Project 2</h2>
-                <p>
-                    <em>Repository link: </em> <br>
-                    <em>Description: </em> <br>
-                    <em>Stack used: </em>
-                </p>
-            </div>
+            <Section class = info>
+                <div class = "contactSection">
+                    <div class="infoRow">
+                        <img class="hideBackground" src = "images/location.png" alt = "location">
+                        <span>Vancouver, CA</span>
+                    </div>
 
-        </section>
+                    <div class="infoRow">
+                        <img class="hideBackground" src = "images/phoneNumber.png" alt = "phoneNumber">
+                        <span>(604) 830 9097</span>
+                    </div>
 
-        <br>
+                    <div class="infoRow">
+                        <img class="hideBackground" src = "images/email.png" alt = "email">
+                        <span>bennnguyen.04@gmail.com</span>
+                    </div>
 
-        <!--Contact section-->
-        <h1>Contact Me</h1>
-        <section class = "contact" id = "contact">
-            <div class = "contactSection">
-                <div class="info-row">
-                    <img class="hideBackground" src="images/location.png" alt="location">
-                    <span>Vancouver, CA</span>
                 </div>
 
-                <div class="info-row">
-                    <img class="hideBackground" src="images/phoneNumber.png" alt="phoneNumber">
-                    <span>(604) 830 9097</span>
-                </div>
-
-                <div class="info-row">
-                    <img class="hideBackground" src="images/email.png" alt="email">
-                    <span>bennnguyen.04@gmail.com</span>
-                </div>
-
-            </div>
-
-            <div class = "contactSection">
-                <form action = "mailto:bennnguyen.04@gmail.com" method = "post">
-                    <input class = "input" placeholder = "Your Name"> <br>
-                    <input class = "input" placeholder = "Your Email"> <br>
-                    <textarea id = "message" name = "comment" placeholder = "Send Me A Message"></textarea> <br><br>
-                    <button type = "submit" value = "Send">Send</button>
-                </form>
-            </div>
-
+            </Section>
+        </div>
     </body>
 </html>
