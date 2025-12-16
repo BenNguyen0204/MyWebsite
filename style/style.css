@@ -12,15 +12,6 @@ body {
     margin: 0;
 }
 
-h1 {
-    color: transparent;
-    background: linear-gradient(180deg, #11dbff, #8c223d);
-    background-clip: text;
-    animation: gradientShift 2s linear infinite;
-    -webkit-background-clip: text;
-    font-size: 100px;
-}
-
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -35,11 +26,33 @@ h1 {
     }
 }
 
+h1 {
+    color: transparent;
+    background: linear-gradient(180deg , #11dbff, #8c223d);
+    background-size: 200% 200%;
+    background-clip: text;
+    animation: gradientShift 5s linear infinite;
+    font-size: 80px;
+}
+
+h2 {
+    color: transparent;
+    background: linear-gradient(180deg , #11dbff, #8c223d);
+        background-size: 200% 200%;
+    background-clip: text;
+    animation: gradientShift 5s linear infinite;
+    font-size: 40px;
+}
+
+h3 {
+    margin: 5px 0;
+    font-size: 25px;
+}
+
 p {
     margin: 10px 0;
-    color: #f0eff4;
-    text-shadow: 15px 15px 10px black;
-    font-size: 40px;
+    color: #797979;
+    font-size: 17px;
 }
 
 .navigation {
@@ -54,8 +67,8 @@ p {
 }
 
 .navigation a {
-    font-size: 30px;
-    padding: 20px 60px;
+    font-size: 20px;
+    padding: 20px 100px;
     text-decoration: none;
     color: #f0eff4;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -91,6 +104,8 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     mask-image: linear-gradient(to bottom,
+            transparent 7%,
+            black 10%,
             black 95%,
             transparent 100%);
 }
@@ -99,6 +114,12 @@ p {
     display: flex;
     justify-self: center;
     align-items: center;
+}
+
+.mainRight p {
+    color: #f0eff4;
+    font-size: 30px;
+    text-shadow: 15px 15px 10px black;
 }
 
 .mainLeft {
@@ -113,17 +134,76 @@ p {
 }
 
 .mainRight h1{
-    margin: -5px 0;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
 .about {
+    text-align: center;
     margin: 10px 100px;
-    min-height: 100vh;
     background-color: #020202;
     z-index: 9999;
 }
 
+.skills {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+}
 
+.skills img {
+    width: 75px;
+}
+
+.skills img:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    20%  { transform: translateX(-5px); }
+    40%  { transform: translateX(5px); }
+    60%  { transform: translateX(-5px); }
+    80%  { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.portfolio {
+    text-align: center;
+    align-items: center;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 75px;
+}
+
+.projectCard {
+    padding: 15px;
+    width: 300px;
+    height: 430px;
+    background-color: #181818;
+}
+
+.projectCard img {
+    width: 300px;
+    display: flex;
+}
+
+.projectCard button {
+    padding: 20px;
+    font-weight: bold;
+    font-family: inherit;
+    color: #f0eff4;
+    background-color: #616161;
+    border: 0px;
+}
+
+.contact {
+    min-height: 100vh;
+}
 
 @media only screen and (max-width: 1400px) {
     .mainWrapper {
@@ -137,7 +217,7 @@ p {
 
     .navigation a {
         font-size: 20px;
-        padding: 10px 20px;
+        padding: 15px 50px;
     }
 
     .mainLeft {
@@ -153,8 +233,15 @@ p {
     }
 
     p {
-        font-size: 20px;
+        font-size: 17px;
     }
 
+    h2 {
+        font-size: 30px;
+    }
+
+    .skills img {
+        width: 50px;
+    }
 }
 
