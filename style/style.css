@@ -1,179 +1,164 @@
 html {
-    background-color: #604D43;
+    margin:0;
+    user-select: none;
+    color: #f0eff4;
+    background-color: #020202;
+    flex-wrap: wrap;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
+    margin:0;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
 
-.pageContainer {
-    background-color: #FFFBF1;
-    color: #604D43;
-    font-family: Comic Sans MS, Comic Sans, cursive;
-    font-size: 20px;
-    font-weight: normal;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 65%;
-    user-select: none;
+.mainWrapper {
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5)), url("../images/bgHome.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 100px 0;
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+}
+
+.navigation {
+    z-index: 9999;
+    position: fixed;
+    top: 0px;
+    background-color:#020202;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    font-size: 30px;
+    padding: 20px 60px;
+    text-decoration: none;
+    color: #f0eff4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navigation a{
+    position: relative;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0%;
+    height: 4px;
+    background-color: #8c223d;
+    transition: width 500ms ease;
+}
+
+.navigation a:hover {
+    color: #8c223d;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    gap: 100px;
+    justify-self: center;
+    align-items: center;
+    padding: 100px 100px;
+}
+
+.mainLeft {
+    width: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid #f0eff4;
+}
+
+.mainRight {
+    margin-left: 20px;
+}
+
+.mainRight h1{
+    margin: -5px 0;
 }
 
 h1 {
-    text-align: center;
-    color: #FFFBF1;
-}
-
-h2, h3, h4, h5, h6 {
-    color: darkcyan;
-    display: inline-block;
-    margin-bottom: -20px;
-}
-
-/*For profile section */
-.profile {
-    display: flex;
-}
-
-.profile h2 {
-    margin-top: -20px;
-    margin-bottom: -20px;
-}
-
-.profile strong {
-    font-size: 25px;
-}
-
-.profileLeft {
-    padding: 10px;
-}
-
-.profileLeft img {
-    width: 100px;
-    border-radius: 10px;
-}
-
-.profileRight {
-    padding: 10px;
-    margin-left: auto;
-}
-
-.profileRight img {
-    width: 50px;
-}
-
-.socialMediaBox {
-    display: inline-block;
-    background-color: #BCA99F;
-    padding: 5px;
-    padding-bottom: auto;
-}
-
-.socialMediaBox:hover {
-    background-color: darkcyan;
-    transition: 1s;
-}
-
-/*For projects section */
-.personalProjects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.projects {
-    flex: 1;
-}
-
-.projects h2 {
-    margin: 10px;
-}
-
-.projects p {
-    padding: 10px;
-}
-
-/*For contact section */
-.contact {
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-input {
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    font-size: 15px;
-    font-family: inherit;
-}
-
-input::placeholder {
-    text-align: center;
-}
-
-input:focus::placeholder, textarea:focus::placeholder {
     color: transparent;
+    background: linear-gradient(180deg, #11dbff, #8c223d);
+    background-size: 300% 300%;
+    background-clip: text;
+    animation: gradientShift 2s linear infinite;
+    -webkit-background-clip: text;
+    font-size: 100px;
 }
 
-textarea {
-    display: flex;
-    width: 100%;
-    height: 200px;
-    font-size: 15px;
-    font-family: inherit;
-    justify-content: center;
+p {
+    margin: 10px 0;
+    color: #f0eff4;
+    text-shadow: 15px 15px 10px black;
+    font-size: 40px;
 }
 
-textarea::placeholder {
-    text-align: center;
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.labelForUserInput {
-    display: block;
-    text-align: center;
-    margin-bottom: 5px;
+@media only screen and (max-width: 1400px) {
+    .main {
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .navigation a {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .mainLeft {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .about {
+        margin: 100px 0px;
+    }
 }
 
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;  /* center text vertically */
-    width: 100%;
-    height: 50px;
-    color: #FFFBF1;
-    font-size: inherit;
-    font-family: inherit;
+.about {
+    scroll-snap-align: start;
+    margin: 10px 100px;
+    min-height: 100vh;
+    background-color: #020202;
+    z-index: 9999;
 }
-
-.infoRow {
-    justify-content: center;
-    margin-left: auto;
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.infoRow img {
-    width: 25px;
-    height: 25px;
-}
-
-/* Hide white color background */
-.hideBackground {
-    mix-blend-mode: multiply;
-}
-
-.brownBorder {
-    border: 2px inset #604D43;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.brownBgColor {
-    background-color: #604D43;
-}
-
-.wheatBgColor {
-    background-color: wheat;;
-}
-
