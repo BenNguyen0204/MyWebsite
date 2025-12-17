@@ -1,76 +1,121 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title> Ben's website</title>
-    <meta charset="UTF-8">
-    <meta name="author" content="Ben">
-    <meta name="description" content="This is Ben's personal website">
-    <link rel="icon" href="images/fireFlame.png" />
-    <link rel="stylesheet" href="style/style.css" />
+  <title>Ben's website</title>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Ben" />
+  <meta name="description" content="This is Ben's personal website" />
+  <link rel="icon" href="images/fireFlame.png" />
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
-    <div class="navigation">
-        <a href="#1">Home↘</a>
-        <a href="#2">About↘</a>
-        <a href="#3">Porfolio↘</a>
-        <a href="#4">Contact↘</a>
+  <div class="navigation">
+    <a href="#1">Home↘</a>
+    <a href="#2">About↘</a>
+    <a href="#3">My Skills↘</a>
+    <a href="#4">Porfolio↘</a>
+    <a href="#5">Contact↘</a>
+  </div>
+
+  <!-- HERO -->
+  <div id="1" class="mainWrapper">
+    <div class="main">
+      <img class="mainLeft" src="images/pain.png" alt="profilePic1" />
+
+      <div class="mainRight">
+        <p>Hello World! I'm</p>
+        <h1>Ben Nguyen</h1>
+        <p><i>"Software Engineer"</i></p>
+      </div>
     </div>
 
-    <div class="mainWrapper" id="1">
-        <div class="main">
-            <img class="mainLeft" src="images/pain.png" alt="profilePic">
-            <div class="mainRight">
-                <h1>Ben Nguyen</h1>
-                <p><i>"Software Engineer"</i></p>
-            </div>
+    <div class="mediaWrapper">
+      <a class="media" href="https://www.linkedin.com/in/bennguyen0204/" target="_blank">
+        <img src="images/linkedin.svg" alt="linkedin">
+      </a>
+      <a class="media" href="https://github.com/BenNguyen0204" target="_blank">
+        <img src="images/github.svg" alt="github">
+      </a>
+      <a class="media" href="https://www.instagram.com/hung.ng4/" target="_blank">
+        <img src="images/instagram.svg" alt="instagram">
+      </a>
+      <a class="media" href="https://open.spotify.com/user/31xriyiu3igcc6nnpq65a2yn52l4" target="_blank">
+        <img src="images/spotify.svg" alt="instagram">
+      </a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="2" class="about">
+    <div class="fadeUp">
+      <h2>About myself</h2>
+      <div class="aboutContainer">
+        <div class="aboutLeft">
+          <p>
+            Hi there. I am a third-year international Software Systems student at Simon Fraser University.
+            I enjoy building things and learning how sofrware works, both from a technical and practical point of view.
+            <br><br>
+            Apart from school works, right now, I'm learning front-end web development and working on
+            personal projects while continuing to level up my programming and problem-solving skills.
+            <br><br>
+          </p>
         </div>
-    </div>
-
-    <div class="about" id="2">
-        <br><br>
-        <h2>About myself</h2>
-        <p>
-            I am a third-year Software Systems student at SFU. <br>
-            Right now, I'm learning front-end web development and trying to level up my skills.     
-        </p>
-        <br>
-        <h2>My skills</h2>
-        <div class = "skills">
-            <img src = "images/css.svg" alt = "css">
-            <img src = "images/html5.svg" alt = "html">
-            <img src = "images/c.svg" alt = "html">
-            <img src = "images/c++.svg" alt = "html">
-            <img src = "images/java.svg" alt = "html">
+        <div class="aboutRight">
+          <img src="images/pain.png" alt="profilePic2">
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="3" class="mySkills">
+    <div class="fadeUp">
+      <h2>My Skills</h2> 
+      <p><i>"What i have learnt so far"</i></p>
+      <div class="skills">
+        <button>
+          <span>Languages</span>
+        </button>
+
+        <button>
+          <span>Front End</span>
+        </button>
+
+        <button>
+          <span>Tools & Workflow</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <div id="4" class="portfolio">
+    <div class="fadeUp">
+      <br><br>
+      <h2>Past projects</h2>
+
+      <div class="projects">
+        <div class="projectCard">
+          <img src="images/project1.png" alt="project 1" />
+          <h3>Personal Website</h3>
+          <p>
+            A responsive portfolio showcasing my projects, skills, and background with a dark theme,
+            animated gradients, ad interactive hover effects.
+            <br /><br />
+            Stack: HTML • CSS • JavaScript
+          </p>
+
+          <a href="https://github.com/BenNguyen0204/MyWebsite" target="_blank" rel="noopener noreferrer">
+            <button>GitHub↘</button>
+          </a>
         </div>
+      </div>
     </div>
+  </div>
 
-    <div class = "portfolio" id = "3">
-        <br><br>
-        <h2>Past projects</h2>
-        <div class = "projects">
-            <div class = "projectCard">
-                <img src="images/project1.png" alt = "project 1">
-                <h3>Personal Website</h3>
-                <p>
-                    A responsive portfolio showcasing my projects, skills, and background with a dark theme, animated gradients, and interactive hover effects.
-                    <br><br>
-                    Stack: HTML • CSS • JavaScript
-                </p>
-                <br>
-                <a href="https://github.com/BenNguyen0204/MyWebsite" target = "_blank">
-                    <button>GitHub↘</button>
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-    <div class = "contact" id = "4">
-        <span></span>
-    </div>
-
+  <!-- CONTACT -->
+  <div id="5" class="contact"></div>
 </body>
 
-</html>
+</html>n
