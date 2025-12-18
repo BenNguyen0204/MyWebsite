@@ -9,7 +9,8 @@ html {
     background-image: linear-gradient(rgb(0, 0, 0, 0.5)), url("../images/bgHome.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 body {
