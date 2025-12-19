@@ -8,24 +8,24 @@
   <meta name="description" content="This is Ben's personal website" />
   <link rel="icon" href="images/fireFlame.png" />
   <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
   <!--Navigation-->
-  <section class="navigation">
+  <section class="navigation" style="--height:40px">
     <a href="#1">Home↘</a>
     <a href="#2">About↘</a>
-    <a href="#3">My Skills↘</a>
+    <a href="#3">Skills↘</a>
     <a href="#4">Porfolio↘</a>
     <a href="#5">Contact↘</a>
   </section>
 
 
   <!-- HERO -->
-  <div id="1" class="mainWrapper">
+  <div id="1" class="mainWrapper" data-aos="fade-up">
     <div class="main">
-      <img class="mainLeft" src="images/pain.png" alt="profilePic1" />
-
+      <img class="mainLeft" src="images/pain.png" alt="profilePic1" loading="lazy">
       <div class="mainRight">
         <p>Hello World! I'm</p>
         <h1>Ben Nguyen</h1>
@@ -35,165 +35,145 @@
 
     <div class="mediaWrapper">
       <a class="media" href="https://www.linkedin.com/in/bennguyen0204/" target="_blank">
-        <img src="images/linkedin.svg" alt="linkedin">
+        <img src="images/linkedin.svg" alt="linkedin" loading="lazy">
       </a>
       <a class="media" href="https://github.com/BenNguyen0204" target="_blank">
-        <img src="images/github.svg" alt="github">
+        <img src="images/github.svg" alt="github" loading="lazy">
       </a>
       <a class="media" href="https://www.instagram.com/hung.ng4/" target="_blank">
-        <img src="images/instagram.svg" alt="instagram">
+        <img src="images/instagram.svg" alt="instagram" loading="lazy">
       </a>
       <a class="media" href="https://open.spotify.com/user/31xriyiu3igcc6nnpq65a2yn52l4" target="_blank">
-        <img src="images/spotify.svg" alt="instagram">
+        <img src="images/spotify.svg" alt="instagram" loading="lazy">
       </a>
     </div>
   </div>
 
   <section class="wrapper">
     <!-- ABOUT -->
-    <div id="2" class="about">
-      <div class="fadeUp">
-        <h2>About myself</h2>
-        <div class="aboutContainer">
-          <div class="aboutLeft">
-            <p>
-              Hi there. I am a third-year international Software Systems student at Simon Fraser University.
-              I enjoy building things and learning how sofrware works, both from a technical and practical point of
-              view.
-              <br><br>
-              Apart from school works, right now, I'm learning front-end web development and working on
-              personal projects while continuing to level up my programming and problem-solving skills.
-              <br><br>
-              Lifestyle wise, I enjoy playing basketball at the local gym, and playing video games on steam, CS2 to
-              be specific :>.
-              <br><br>
-            </p>
-          </div>
-          <div class="aboutRight">
-            <img src="images/pain.png" alt="profilePic2">
-          </div>
+    <div id="2" class="about section-line" data-aos="fade-up">
+      <h2>About myself</h2>
+      <div class="aboutContainer">
+        <div class="aboutLeft">
+          <p>
+            Hi there. I am a third-year international Software Systems student at Simon Fraser University.
+            I enjoy building things and learning how software works, both from a technical and practical point of
+            view.
+            <br><br>
+            Apart from school works, right now, I'm learning front-end web development and working on
+            personal projects while continuing to level up my programming and problem-solving skills.
+            <br><br>
+            Lifestyle wise, I enjoy playing basketball at the local gym, and playing video games on steam, CS2 to
+            be specific :>.
+            <br><br>
+          </p>
+        </div>
+        <div class="aboutRight">
+          <img src="images/pain.png" alt="profilePic2" loading="lazy">
         </div>
       </div>
     </div>
 
-    <div id="3" class="mySkills">
-      <div class="fadeUp">
-        <h2>My Skills</h2>
-        <p><i>"Explore the languages and tools I've learnt so far"</i></p>
+    <div id="3" class="mySkills" data-aos="fade-up">
+      <h2>My Skills</h2>
+      <p><i>"Explore the languages and tools I've learnt so far"</i></p>
 
-        <div class="skills">
-          <div class="skillsLeft">
-            <button class="skillItem" data-skill="languages">
-              <span>Languages↘</span>
-            </button>
+      <h3>Languages</h3>
+      <br>
 
-            <button class="skillItem" data-skill="tools">
-              <span>Tools↘</span>
-            </button>
+      <div class="slider" style="--width:75px; --height:75px; --quantity:12">
+        <div class="skillsList">
+          <div class="item" style="--position: 1"><img src="images/c.svg" alt="c" loading="lazy"></div>
+          <div class="item" style="--position: 2"><img src="images/c++.svg" alt="c++" loading="lazy"></div>
+          <div class="item" style="--position: 3"><img src="images/java.svg" alt="java" loading="lazy"></div>
+          <div class="item" style="--position: 4"><img src="images/html5.svg" alt="html" loading="lazy"></div>
+          <div class="item" style="--position: 5"><img src="images/css.svg" alt="css" loading="lazy"></div>
+          <div class="item" style="--position: 6"><img src="images/javascript.svg" alt="JavaScript" loading="lazy">
           </div>
-
-          <div id="skillsRight" class="skillsRight">
+          <!--Repeat-->
+          <div class="item" style="--position: 7"><img src="images/c.svg" alt="c" loading="lazy"></div>
+          <div class="item" style="--position: 8"><img src="images/c++.svg" alt="c++" loading="lazy"></div>
+          <div class="item" style="--position: 9"><img src="images/java.svg" alt="java" loading="lazy"></div>
+          <div class="item" style="--position: 10"><img src="images/html5.svg" alt="html" loading="lazy"></div>
+          <div class="item" style="--position: 11"><img src="images/css.svg" alt="css" loading="lazy"></div>
+          <div class="item" style="--position: 12"><img src="images/javascript.svg" alt="JavaScript" loading="lazy">
           </div>
+        </div>
+      </div>
+
+      <br>
+      <h3>Tools and Workflow</h3>
+      <br>
+
+      <div class="slider" style="--width:75px; --height:75px; --quantity:8">
+        <div class="skillsList">
+          <div class="item" style="--position: 1"><img src="images/git.svg" alt="git" loading="lazy"></div>
+          <div class="item" style="--position: 2"><img src="images/github2.svg" alt="github" loading="lazy"></div>
+          <div class="item" style="--position: 3"><img src="images/vscode.svg" alt="vscode" loading="lazy"></div>
+          <div class="item" style="--position: 4"><img src="images/intellij.svg" alt="intellij" loading="lazy"></div>
+          <!--Repeat-->
+          <div class="item" style="--position: 5"><img src="images/git.svg" alt="git" loading="lazy"></div>
+          <div class="item" style="--position: 6"><img src="images/github2.svg" alt="github" loading="lazy"></div>
+          <div class="item" style="--position: 7"><img src="images/vscode.svg" alt="vscode" loading="lazy"></div>
+          <div class="item" style="--position: 8"><img src="images/intellij.svg" alt="intellij" loading="lazy"></div>
         </div>
       </div>
     </div>
 
     <!-- PORTFOLIO -->
-    <div id="4" class="portfolio">
-      <div class="fadeUp">
-        <br><br>
-        <h2>Past projects</h2>
-        <p><i>"Explore the projects I've worked on so far"</i></p>
+    <div id="4" class="portfolio" data-aos="fade-up">
+      <br><br>
+      <h2>Past projects</h2>
+      <p><i>"Explore the projects I've worked on so far"</i></p>
 
-        <div class="projects">
-          <div class="projectCard">
-            <img src="images/project1.png" alt="project 1" />
-            <h3>Personal Website</h3>
-            <p>
-              A responsive portfolio showcasing my projects, skills, animated gradients, and interactive hover effects.
-              Made purely with css and html.
-              <br /><br />
-              Stack: HTML • CSS • JavaScript
-            </p>
+      <div class="projects">
+        <div class="projectCard">
+          <img src="images/project1.png" alt="project 1" loading="lazy" />
+          <h3>Personal Website</h3>
+          <p>
+            A responsive portfolio showcasing my projects, skills, animated gradients, and interactive hover
+            effects.
+            Made purely with css and html.
+            <br /><br />
+            Stack: HTML • CSS • JavaScript
+          </p>
 
-            <a href="https://github.com/BenNguyen0204/MyWebsite" target="_blank" rel="noopener noreferrer">
-              <button>GitHub↘</button>
-            </a>
-          </div>
+          <a href="https://github.com/BenNguyen0204/MyWebsite" target="_blank" rel="noopener noreferrer">
+            <button>GitHub↘</button>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="contact">
-    <div id="5" class="contact">
-      <p class="contactElement">
-        <img src="images/phone.svg" alt="phone">
-        (+1) 804 830 9097
-      </p>
+  <section id="5" class="contact">
+    <p class="contactElement">
+      <img src="images/phone.svg" alt="phone" loading="lazy">
+      (+1) 804 830 9097
+    </p>
 
-      <p class="contactElement">
-        <img src="images/location.svg" alt="location">
-        Vancouver, BC, Canada
-      </p>
+    <p class="contactElement">
+      <img src="images/location.svg" alt="location" loading="lazy">
+      Vancouver, BC, Canada
+    </p>
 
-      <p class="contactElement">
-        <img src="images/mail.svg" alt="mail">
-        bennguyen0204@gmail.com
-      </p>
-    </div>
+    <p class="contactElement">
+      <img src="images/mail.svg" alt="mail" loading="lazy">
+      bennguyen0204@gmail.com
+    </p>
   </section>
 
-  <script>
-    const skillData = {
-      languages: [
-        { name: "C", src: "images/c.svg" },
-        { name: "C++", src: "images/c++.svg" },
-        { name: "Java", src: "images/java.svg" },
-        { name: "HTML", src: "images/html5.svg" },
-        { name: "CSS", src: "images/css.svg" },
-        { name: "JavaScript", src: "images/javascript.svg" }
-      ],
-      tools: [
-        { name: "Git", src: "images/git.svg" },
-        { name: "GitHub", src: "images/github2.svg" },
-        { name: "VS Code", src: "images/vscode.svg" },
-        { name: "Intellij", src: "images/intellij.svg" }
-      ]
-    };
-
-    const items = document.querySelectorAll(".skillItem");
-    const right = document.getElementById("skillsRight");
-
-    items.forEach(item => {
-
-
-      item.addEventListener("click", () => {
-        items.forEach(but => but.classList.remove("active"));
-        item.classList.add("active");
-
-        const key = item.dataset.skill;
-
-        const cards = skillData[key].map(x => `
-            <div class="iconCard">
-              <img src="${x.src}" alt="${x.name}">
-            </div>
-          `).join("");
-
-        right.innerHTML = `
-            <div class="iconTrack">
-              <div class="iconSet">
-                ${cards}
-              </div>
-              <div class="iconSet" aria-hidden="true">
-                ${cards}
-              </div>
-            </div>`;
-      });
-    });
-    items[0]?.click();
-  </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 500,
+      easing: 'ease-in-out',
+      anchorPlacement: 'top-center',
+  });
+</script>
 </body>
 
 </html>
