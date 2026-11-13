@@ -207,48 +207,60 @@ p {
         margin-bottom: 50px;
     }
 
+    .skillNames {
+        font-size: 16px;
+        margin: 0 auto 25px;
+        max-width: 90%;
+    }
+
     .slider {
         width: 80%;
-        height: var(--height);
-        mask-image: linear-gradient(to right, transparent, #020202, transparent);
-        position: relative;
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent, #020202 15%, #020202 85%, transparent);
         margin: 0 auto;
 
+        /* Two identical sets of icons; sliding by -50% loops seamlessly at any screen width */
         .skillsList {
-            position: relative;
             display: flex;
-            width: 100%;
-            min-width: calc(var(--quantity) * var(--width));
+            width: max-content;
+            animation: marquee var(--duration, 30s) linear infinite;
 
             .item {
-                width: var(--width);
-                height: var(--height);
-                position: absolute;
-                right: 100%;
-                animation: autoRun 10s linear infinite;
-                animation-delay: calc((20s) / var(--quantity) * var(--position));
+                flex: none;
+                padding: 0 30px;
 
                 img {
                     width: 75px;
                     height: 75px;
-                    align-items: center;
+                    display: block;
+                }
+
+                img.invert {
+                    filter: invert(1);
                 }
             }
         }
     }
-    .slider:hover .item {
-        animation-play-state: paused !important;
+
+    .slider:hover .skillsList {
+        animation-play-state: paused;
     }
 
 }
 
-@keyframes autoRun {
+@keyframes marquee {
     from {
-        right: 100%;
+        transform: translateX(0);
     }
 
     to {
-        right: calc(var(--width) * -1);
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mySkills .slider .skillsList {
+        animation: none;
     }
 }
 
@@ -305,27 +317,86 @@ p {
             width: 300px;
             background-color: #181818;
 
+            display: flex;
+            flex-direction: column;
+
             img {
                 width: 300px;
-                display: flex;
+                height: 160px;
+                object-fit: cover;
+                object-position: top;
+                display: block;
             }
 
-            button {
-                cursor: pointer;
-                margin-top: 10px;
-                padding: 20px;
+            .projectBanner {
+                height: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 15px;
+                font-size: 28px;
                 font-weight: bold;
-                font-family: inherit;
+                color: #f0eff4;
+                background: linear-gradient(135deg, #8c223d, #020202);
+                background-size: 200% 200%;
+                animation: gradientShift 5s linear infinite;
+            }
+
+            h3 {
+                margin: 20px 0 5px;
+                font-size: 24px;
+            }
+
+            .projectMeta {
+                font-size: 14px;
+                color: #8c223d;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 16px;
+                text-align: left;
+                margin-bottom: 20px;
+                flex: 1;
+            }
+
+            .projectLinks {
+                display: flex;
+                gap: 10px;
+            }
+
+            .projectLinks a {
+                flex: 1;
+                padding: 15px;
+                font-weight: bold;
+                text-decoration: none;
                 color: #f0eff4;
                 background-color: #616161;
-                border: 0px;
             }
 
-            button:hover {
+            .projectLinks a:hover {
                 animation: shake 0.5s;
+                background-color: #8c223d;
             }
         }
     }
+}
+
+/* Resume button in hero */
+.mainWrapper .resumeBtn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f0eff4;
+    background-color: #8c223d;
+    border: 3px solid #f0eff4;
+}
+
+.mainWrapper .resumeBtn:hover {
+    animation: shake 0.5s;
 }
 
 /* For contact */
@@ -343,6 +414,15 @@ p {
         font-size: 15px;
         word-wrap: break-word;
         overflow-wrap: break-word;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #8c223d;
     }
 
     .contactElement {
@@ -389,7 +469,7 @@ p {
     }
 
     .mainWrapper {
-        height: 100vh;
+        min-height: 100vh;
         padding-top: 80px;
 
         .main {
